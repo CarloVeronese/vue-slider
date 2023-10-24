@@ -33,7 +33,7 @@ createApp({
                 }
             ],
             currentIndex: 0,
-            slideShow: '',
+            slideShow: setInterval(this.nextImage, 3000)
         }
     },      
     methods: {
@@ -51,8 +51,5 @@ createApp({
         stopShow(){
             clearInterval(this.slideShow)
         }
-    },
-    beforeMount() {
-        this.startShow()
     }
 }).mount('#app')
